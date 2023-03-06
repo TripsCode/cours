@@ -1,0 +1,254 @@
+@font-face {
+  font-family: ssp;
+  src: url(./font/SourceSansPro-Light.ttf);
+}
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-style: none;
+  outline: none;
+  font-family: ssp, sans-serif;
+}
+/* version3 */
+img {
+  /* width: 100%;
+  min-height: 100%; */
+}
+button {
+  width: 150px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 12px 0;
+  margin: 20px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+button:hover {
+  border-color: skyblue;
+  color: skyblue;
+}
+h1 {
+  font-weight: 100;
+  text-transform: capitalize;
+  font-size: 3.4rem;
+  padding: 40px 0;
+}
+h3 {
+  font-size: 2rem;
+  padding: 20px 0;
+}
+p {
+  line-height: 2.3rem;
+  font-size: 1.3rem;
+}
+.textcontainer {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container {
+  align-items: center;
+}
+.container1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
+}
+.imgcontainer1 {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.container2 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.container3 {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.container2,
+.container3 {
+  height: 400px;
+}
+.imgcontainer {
+  /* height: 25vw;
+  display: flex;
+  align-items: center;
+  overflow: hidden; */
+  height: 100%;
+  /* display: flex;
+  justify-content: flex-end;
+  overflow: hidden; */
+}
+.imgcontainer2 {
+  background: url(./img/img-left.jpg) center/cover;
+}
+.imgcontainer3 {
+  background: url(./img/img-right.jpg) center/cover;
+}
+.container2,
+.container3,
+.form {
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.137);
+}
+/* *****************************FORM************************** */
+
+.form {
+  padding: 60px 0;
+  position: relative;
+}
+.form::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 90%;
+  background: #ccc;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.formulaire {
+  width: 50%;
+  padding-top: 30px;
+  max-width: 740px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    "na em"
+    "mes mes"
+    "btn btn";
+  column-gap: 10px;
+}
+.form h3 {
+  padding: 0;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  font-weight: 200;
+  grid-area: ti;
+  text-align: center;
+}
+.nom {
+  grid-area: na;
+  /* height: 80px; */
+}
+.email {
+  grid-area: em;
+}
+.message {
+  grid-area: mes;
+  padding: 10px 0;
+}
+.formulaire button {
+  grid-area: btn;
+  margin: auto;
+}
+.form label {
+  display: block;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 700;
+}
+input,
+textarea {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+input,
+#message {
+  padding: 5px;
+}
+input:focus-visible,
+:focus {
+  border-color: skyblue;
+}
+#nom,
+#email {
+  width: 100%;
+  max-width: 370px;
+  height: 50px;
+}
+#message {
+  width: 100%;
+  height: 150px;
+}
+.socialnet {
+  /* position: relative; */
+  display: flex;
+  width: 40%;
+  margin: 80px auto;
+  justify-content: space-between;
+}
+i {
+  position: relative;
+}
+i::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+}
+i:hover::after,
+i:hover::before {
+  border-color: skyblue;
+  color: skyblue;
+}
+
+/* ********************************MEDIA QUERIES************* */
+
+@media screen and (max-width: 620px) {
+  .container1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .imgcontainer1 {
+    height: 50%;
+  }
+  .container2,
+  .container3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .form {
+    padding: 30px 0;
+  }
+  .formulaire {
+    width: 80%;
+  }
+  #nom,
+  #email {
+    height: 35px;
+  }
+  i::before {
+    font-size: 0.8rem;
+  }
+  i::after {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-height: 360px) {
+  .textcontainer {
+    padding: 2px 10px;
+  }
+  h1 {
+    padding: 10px;
+  }
+  button {
+    margin: 10px;
+  }
+}
