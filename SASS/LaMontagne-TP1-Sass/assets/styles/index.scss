@@ -57,12 +57,22 @@ header {
     height: 100vh;
     @include flex;
     flex-direction: column;
-
+    // animation: topanim 2s linear;
+    
     .top-header {
         text-transform: uppercase;
         text-align: center;
         width: 50%;
         margin: auto;
+        // animation: topanim 2s linear;
+        // @keyframes topanim {
+            // 0% {
+            //     background: black;
+            // }
+            // 100% {
+            //     background: rgba(0, 0, 0, 0);
+            // }
+        
         h1 {
             letter-spacing: 7px;
             padding-bottom: 50px;
@@ -90,8 +100,7 @@ header {
                 transform: translate(-50%, -50%);
             }
         }
-    
-    }
+    }    
     .bottom-header {
         display: grid;
         grid-template-columns: 70% 30%;
@@ -120,35 +129,35 @@ header {
                     &:hover {
                         background: $color1;
                         color: black
-                        }
-                        
                     }
+                        
                 }
             }
         }
-        .social-net {
-            @include flex;
-            justify-content: space-evenly;
-            
-            li {
-                i {
-                    font-size: 1.2rem;
-                    color: $color1;
-                }
-                &:hover {
-                    animation: iscale 0.8s linear;
-                    @keyframes iscale {
-                        50% {
-                            transform: scale(1.5) rotate(180deg);
-                        }
-                        100% {
-                            transform: scale(1) rotate(360deg);
-                        }
+    }
+    .social-net {
+        @include flex;
+        justify-content: space-evenly;
+        
+        li {
+            i {
+                font-size: 1.2rem;
+                color: $color1;
+            }
+            &:hover {
+                animation: iscale 0.8s linear;
+                @keyframes iscale {
+                    50% {
+                        transform: scale(1.5) rotate(180deg);
+                    }
+                    100% {
+                        transform: scale(1) rotate(360deg);
                     }
                 }
             }
         }
     }
+}
     
     // **********************MAIN*********************
     
@@ -271,25 +280,84 @@ footer {
         width: 50%;
     }
     .left-part {
+        border-right: 1px solid rgba(128, 128, 128, 0.288);
         form {
             display: grid;
             grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
             gap: 20px;
             height: 100%;
-            padding: 40px 30px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 50px 30px;
             div {
                 display: flex;
                 align-items: flex-end;
                 button {
                     margin: 0;
                 }
+            }
+            input,
+            textarea {
+                background: transparent;
+                border-radius: 5px;
+                border: 1px solid rgba(128, 128, 128, 0.288);
             }    
         }
     }
     .right-part {
         .adress {
-        display: grid;
-        grid-template-rows: 140px 140px 140px 140px;
+            display: grid;
+            height: 100%;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            
+            div {
+            padding-left: 40px;
+            display: grid;
+            grid-template-columns: 25% 75%;
+            align-items: center;
+            align-content: space-around;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.288);
+
+                h3 {
+                    font-family: inter, serif;
+                    text-transform: uppercase;
+                    font-size: 0.7rem;
+                    letter-spacing: 2px;
+                    color: rgb(100, 100, 100);
+                    }
+
+                p {
+                    font-family: merri, serif;
+                    color: rgb(100, 100, 100);
+                    line-height: 35px;
+                }
+            }
+            ul {
+                display: flex;
+                width: 60%;
+
+                li{
+                    padding: 0 25px;
+                }
+
+                i {
+                    color: black;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 50px;
+                        border: 1px solid rgba(128, 128, 128, 0.288);
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+
+                    }
+                }
+            }
         }
     }
 }

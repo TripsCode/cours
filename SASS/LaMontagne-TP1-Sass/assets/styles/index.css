@@ -258,12 +258,17 @@ footer .left-part,
 footer .right-part {
   width: 50%;
 }
+footer .left-part {
+  border-right: 1px solid rgba(128, 128, 128, 0.288);
+}
 footer .left-part form {
   display: grid;
   grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
   gap: 20px;
   height: 100%;
-  padding: 40px 30px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 30px;
 }
 footer .left-part form div {
   display: flex;
@@ -272,7 +277,56 @@ footer .left-part form div {
 footer .left-part form div button {
   margin: 0;
 }
+footer .left-part form input,
+footer .left-part form textarea {
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.288);
+}
 footer .right-part .adress {
   display: grid;
-  grid-template-rows: 140px 140px 140px 140px;
+  height: 100%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+footer .right-part .adress div {
+  padding-left: 40px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
+  align-content: space-around;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.288);
+}
+footer .right-part .adress div h3 {
+  font-family: inter, serif;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: rgb(100, 100, 100);
+}
+footer .right-part .adress div p {
+  font-family: merri, serif;
+  color: rgb(100, 100, 100);
+  line-height: 35px;
+}
+footer .right-part .adress ul {
+  display: flex;
+  width: 60%;
+}
+footer .right-part .adress ul li {
+  padding: 0 25px;
+}
+footer .right-part .adress ul i {
+  color: black;
+  position: relative;
+}
+footer .right-part .adress ul i::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  border: 1px solid rgba(128, 128, 128, 0.288);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=index.css.map */
