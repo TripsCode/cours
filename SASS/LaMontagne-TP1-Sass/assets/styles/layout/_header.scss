@@ -1,0 +1,114 @@
+@use '../settings' as set;
+
+header {
+    color: set.$color1;
+    height: 100vh;
+    @include set.flex;
+    flex-direction: column;
+    // animation: topanim 2s linear;
+    
+    .top-header {
+        text-transform: uppercase;
+        text-align: center;
+        margin: auto;
+        // animation: topanim 2s linear;
+        // @keyframes topanim {
+            // 0% {
+            //     background: black;
+            // }
+            // 100% {
+            //     background: rgba(0, 0, 0, 0);
+            // }
+        
+        h1 {
+            letter-spacing: 7px;
+            padding-bottom: 50px;
+        }
+        p {
+            font-family: merri;
+            text-transform: initial ;
+            padding-bottom: 50px;
+            font-size: 1.2rem;
+        }
+        i {
+            margin-top: 30px;
+            font-size: 1.5rem;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                height: 60px;
+                width: 60px;
+                border-radius: 50px;
+                border: 2px solid set.$color1;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }    
+    .bottom-header {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        width: 80%;
+        max-width: 1150px;
+        background: rgba(240, 248, 255, 0.199);
+       
+        .nav {
+                display: flex;
+        
+            ul {
+                text-transform: uppercase;
+                @include set.flex;
+                justify-content: flex-start;
+
+                li {
+                    padding: 25px 10px;
+                    font-size: 0.8rem;
+                    font-weight: 300;
+                    letter-spacing: 3px;
+                    &:first-child {
+                        
+                        background: set.$color1;
+                        color: black;
+                    }
+                    &:hover {
+                        background: set.$color1;
+                        color: black
+                    }
+                    @media screen and (max-width: 600px) {
+                        font-size: 0.6rem;
+                    }
+                        
+                }
+            }
+        }
+    }
+    .social-net {
+        @include set.flex;
+        justify-content: space-evenly;
+        
+        li {
+            i {
+                font-size: 1.2rem;
+                color: set.$color1;
+            }
+            &:hover {
+                animation: iscale 0.8s linear;
+                @keyframes iscale {
+                    50% {
+                        transform: scale(1.5) rotate(180deg);
+                    }
+                    100% {
+                        transform: scale(1) rotate(360deg);
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+}
+  

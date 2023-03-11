@@ -19,6 +19,11 @@
 h1 {
   font-size: 4rem;
 }
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
 
 h3 {
   font-family: merri, serif;
@@ -53,7 +58,6 @@ header {
 header .top-header {
   text-transform: uppercase;
   text-align: center;
-  width: 50%;
   margin: auto;
 }
 header .top-header h1 {
@@ -113,6 +117,11 @@ header .bottom-header .nav ul li:hover {
   background: rgba(253, 253, 253, 0.904);
   color: black;
 }
+@media screen and (max-width: 600px) {
+  header .bottom-header .nav ul li {
+    font-size: 0.6rem;
+  }
+}
 header .social-net {
   display: flex;
   justify-content: center;
@@ -132,6 +141,11 @@ header .social-net li:hover {
   }
   100% {
     transform: scale(1) rotate(360deg);
+  }
+}
+@media screen and (max-width: 600px) {
+  header .social-net {
+    display: none;
   }
 }
 
@@ -165,6 +179,16 @@ main .top-main .tmcontent h3::before {
   transform: translateY(10px);
   background-color: rgba(0, 0, 0, 0.116);
 }
+@media screen and (max-width: 900px) {
+  main .top-main .tmcontent h3::before {
+    width: 15vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .top-main .tmcontent h3::before {
+    width: 10vw;
+  }
+}
 main .top-main .tmcontent h3::after {
   content: "";
   position: absolute;
@@ -174,6 +198,16 @@ main .top-main .tmcontent h3::after {
   transform: translateY(10px);
   background-color: rgba(0, 0, 0, 0.116);
 }
+@media screen and (max-width: 900px) {
+  main .top-main .tmcontent h3::after {
+    width: 15vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .top-main .tmcontent h3::after {
+    width: 10vw;
+  }
+}
 main .top-main .tmcontent h2 {
   text-transform: uppercase;
   font-size: 2.5rem;
@@ -182,6 +216,11 @@ main .top-main .tmcontent h2 {
   width: 60%;
   margin: 0 auto;
   padding: 30px 0;
+}
+@media screen and (max-width: 600px) {
+  main .top-main .tmcontent h2 {
+    font-size: 1.3rem;
+  }
 }
 main .top-main .tmcontent p {
   font-family: merri, serif;
@@ -200,6 +239,16 @@ main .middle-main .img-content {
   height: 600px;
   background: url(../images/pic01.jpg) center/cover;
 }
+@media screen and (max-width: 900px) {
+  main .middle-main .img-content {
+    height: 330px;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .middle-main .img-content {
+    height: 220px;
+  }
+}
 main .middle-main .btn-content {
   margin-bottom: 50px;
 }
@@ -211,6 +260,11 @@ main .bottom-main {
   border-top: 1px solid rgba(128, 128, 128, 0.288);
   margin-bottom: 30px;
 }
+@media screen and (max-width: 600px) {
+  main .bottom-main {
+    display: block;
+  }
+}
 main .bottom-main img {
   width: 100%;
 }
@@ -221,6 +275,12 @@ main .bottom-main .right-bottom {
   text-align: center;
   width: 50%;
   padding: 60px;
+}
+@media screen and (max-width: 600px) {
+  main .bottom-main .left-bottom,
+  main .bottom-main .right-bottom {
+    width: 100%;
+  }
 }
 main .bottom-main .left-bottom h3,
 main .bottom-main .right-bottom h3 {
@@ -242,8 +302,19 @@ main .bottom-main .right-bottom p {
   font-size: 0.8rem;
   line-height: 30px;
 }
+@media screen and (max-width: 900px) {
+  main .bottom-main .left-bottom,
+  main .bottom-main .right-bottom {
+    padding: 20px;
+  }
+}
 main .bottom-main .left-bottom {
   border-right: 1px solid rgba(128, 128, 128, 0.288);
+}
+@media screen and (max-width: 600px) {
+  main .bottom-main .left-bottom {
+    border-right: none;
+  }
 }
 
 footer {
@@ -254,9 +325,20 @@ footer {
   background: rgba(253, 253, 253, 0.904);
   display: flex;
 }
+@media screen and (max-width: 900px) {
+  footer {
+    display: block;
+  }
+}
 footer .left-part,
 footer .right-part {
   width: 50%;
+}
+@media screen and (max-width: 900px) {
+  footer .left-part,
+  footer .right-part {
+    width: auto;
+  }
 }
 footer .left-part {
   border-right: 1px solid rgba(128, 128, 128, 0.288);
@@ -283,6 +365,11 @@ footer .left-part form textarea {
   border-radius: 5px;
   border: 1px solid rgba(128, 128, 128, 0.288);
 }
+@media screen and (max-width: 900px) {
+  footer .left-part {
+    border-right: none;
+  }
+}
 footer .right-part .adress {
   display: grid;
   height: 100%;
@@ -296,6 +383,19 @@ footer .right-part .adress div {
   align-content: space-around;
   border-bottom: 1px solid rgba(128, 128, 128, 0.288);
 }
+@media screen and (max-width: 900px) {
+  footer .right-part .adress div {
+    padding-left: 70px;
+  }
+  footer .right-part .adress div:first-child {
+    border-top: 1px solid rgba(128, 128, 128, 0.288);
+  }
+}
+@media screen and (max-width: 600px) {
+  footer .right-part .adress div {
+    padding-left: 25px;
+  }
+}
 footer .right-part .adress div h3 {
   font-family: inter, serif;
   text-transform: uppercase;
@@ -304,16 +404,22 @@ footer .right-part .adress div h3 {
   color: rgb(100, 100, 100);
 }
 footer .right-part .adress div p {
+  font-size: 0.8rem;
   font-family: merri, serif;
   color: rgb(100, 100, 100);
   line-height: 35px;
+}
+@media screen and (max-width: 600px) {
+  footer .right-part .adress div p {
+    font-size: 0.6rem;
+  }
 }
 footer .right-part .adress ul {
   display: flex;
   width: 60%;
 }
 footer .right-part .adress ul li {
-  padding: 0 25px;
+  padding: 0 20px;
 }
 footer .right-part .adress ul i {
   color: black;
@@ -322,8 +428,8 @@ footer .right-part .adress ul i {
 footer .right-part .adress ul i::after {
   content: "";
   position: absolute;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50px;
   border: 1px solid rgba(128, 128, 128, 0.288);
   left: 50%;

@@ -1,0 +1,54 @@
+@font-face {
+    font-family: merri;
+    src: url(../fonts/Merriweather-Regular.ttf);
+}
+@font-face {
+    font-family: 'inter';
+    src: url(../fonts/Inter\ Extra\ Bold\ 800.otf);
+}
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin main-section{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+$color1: rgba(253, 253, 253, 0.904);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: inter, serif;
+    list-style: none;
+    text-decoration: none;
+}
+h1 {
+    font-size: 4rem;
+    @media screen and (max-width: 600px) {
+        font-size: 3rem;
+    }
+}
+h3 {
+    font-family: merri, serif;
+}
+button {
+    text-transform: uppercase;
+    background: transparent;
+    padding: 15px 50px;
+    margin: 50px 0;  
+}
+label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: rgb(100, 100, 100);
+}
+body {
+    background: url(../images/bg.jpg) fixed center/cover;
+}
